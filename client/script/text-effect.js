@@ -16,40 +16,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 
-#gameplay {
-
-div.dialog_box {
-    position: absolute;
-    left: 1.25vh;
-    right: 1.25vh;
-    bottom: 1.25vh;
-    height: 25vh;
-    overflow: hidden;
-}
-
-img.dialog_box {
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-}
-
-div.dialog_area {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    padding: 3vmin;
-    overflow: hidden;
-}
-span.dialog_visible{
+function turnChar()
+{
+      visible = $("span.dialog_visible");
+      hidden = $("span.dialog_hidden");
+      visible.text(visible.text() + hidden.text().charAt(0));
+      hidden.text(hidden.text().substring(1);
 
 }
-
-span.dialog_hidden{
-visibility:hidden;
-}
-
-} /* #gameplay */
