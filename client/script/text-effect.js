@@ -18,8 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 function turnChar()
 {
-    visible = $("span.dialog_visible");
-    hidden = $("span.dialog_hidden");
+    var visible = $("span.dialog_visible");
+    var hidden = $("span.dialog_hidden");
     visible.text(visible.text() + hidden.text().charAt(0));
     hidden.text(hidden.text().substring(1);
 }
