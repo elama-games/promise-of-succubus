@@ -16,6 +16,46 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 
+.centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.covering {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 body {
+    margin: 0;
+    padding: 0;
     background-color: purple;
+    overflow: hidden;
+}
+
+h1 {
+    display: none;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+div.scene {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+img.background {
+    .centered();
+    .covering();
 }
