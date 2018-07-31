@@ -21,5 +21,5 @@ function turnChar()
     var visible = $("span.dialog_visible");
     var hidden = $("span.dialog_hidden");
     visible.text(visible.text() + hidden.text().charAt(0));
-    hidden.text(hidden.text().substring(1);
+    hidden.text(hidden.text().substring(1));
 }
