@@ -16,6 +16,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 
+var settings = {
+  textSpeed: 20
+}
+
+
 function turnChar()
 {
     var visible = $("span.dialog_visible");
@@ -23,3 +28,20 @@ function turnChar()
     visible.text(visible.text() + hidden.text().charAt(0));
     hidden.text(hidden.text().substring(1));
 }
+
+
+function scheduleTextEffect()
+{
+    var i = 1
+    var text =  $("span.dialog_hidden").text();
+    while (i <= text.length) {
+        setTimeout(turnChar, i * 1000 / settings.textSpeed);
+        ++i;
+    }
+}
+
+
+$(document).ready(function ()
+{
+	scheduleTextEffect();
+})
